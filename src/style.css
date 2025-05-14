@@ -25,7 +25,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: start;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -59,10 +59,21 @@ button:focus-visible {
 }
 
 #app {
+  flex: 1; /* Permite que el contenido ocupe el espacio disponible */
+  display: flex;
+  flex-direction: column;
   max-width: inherit;
   margin: 0 auto;
   padding: 2rem;
   text-align: start;
+}
+
+footer {
+  flex-shrink: 0; /* Evita que el footer se reduzca */
+  margin-top: auto; /* Empuja el footer al final */
+  background-color: #f8f9fa; /* Color de fondo opcional */
+  padding: 1rem;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {

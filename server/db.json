@@ -63,17 +63,36 @@
   ],
   "myPublishedVehicles": [
     {
-      "id": 1,
+      "id": 4,
+      "model": "Yaris",
+      "brand": "Toyota",
+      "year": "2007",
+      "description": "Vehículo compacto, perfecto para uso diario y muy económico.",
+      "image": "https://www.peruautos.pe/wp-content/uploads/2024/04/Toyota-Yaris-Liderando-Ventas-de-Carros-en-Peru-Rendimiento-Comodidad-y-Confianza-peruautos.pe_.jpg",
+      "price": 80,
+      "publishedDate": "13/05"
+    },
+    {
+      "id": 5,
+      "model": "Sentra",
+      "brand": "Nissan",
+      "year": "1999",
+      "description": "Sedán confiable con amplio espacio interior.",
+      "image": "https://santacecilia.com.pe/wp-content/uploads/2024/07/2880x2048-V2.jpg.ximg_.l_12_h.smart_-e1720313623284-798x466.jpg",
+      "price": 60,
+      "rating": 3
+    },
+    {
+      "id": 6,
       "model": "Civic",
       "brand": "Honda",
       "year": "2024",
-      "description": "Estoy alquilando mi vehiculo",
-      "image": "https://fuelcarmagazine.com/wp-content/uploads/2024/05/Honda-Civic-2025-hibrido.jpg",
-      "price": 200,
-      "publishedDate":""
+      "description": "Vehículo de lujo con diseño futurista y excelente rendimiento.",
+      "image": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_1d6e245013354690874907af24fbca7c.webp",
+      "price": 220,
+      "rating": 5
     }
   ],
-
   "myBookedVehicles": [
     {
       "id": 1,
@@ -84,20 +103,28 @@
       "image": "https://fuelcarmagazine.com/wp-content/uploads/2024/05/Honda-Civic-2025-hibrido.jpg",
       "price": 200,
       "rating": 4
+    },
+    {
+      "id": 6,
+      "model": "Civic",
+      "brand": "Honda",
+      "year": "2024",
+      "description": "Vehículo de lujo con diseño futurista y excelente rendimiento.",
+      "image": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_1d6e245013354690874907af24fbca7c.webp",
+      "price": 220,
+      "rating": 5
     }
   ],
-
   "userProfile": [
     {
-      "profilePic":"",
+      "profilePic": "",
       "fullName": "",
       "email": "",
       "phone": "",
       "address": "",
       "birthday": "",
-      "dniPic" : "",
-      "licensePic" : ""
+      "dniPic": "",
+      "licensePic": ""
     }
   ]
-
 }

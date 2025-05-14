@@ -6,5 +6,5 @@ const i18n = createI18n({
     locale: "en",
     fallbackLocale: "en",
     globalInjection: true,
-    messages: {en, es},});
+    messages: {en   , es},});
 export default i18n;

@@ -10,6 +10,9 @@ export default {
       drawer: false,
       items: [
         {label: 'option.home',       to: '/home'},
+        {label: 'option.publications',       to: '/publications'},
+        {label: 'option.navigation',       to: '/navigation'},
+
       ]
     }
   },
@@ -28,7 +31,7 @@ export default {
     <pv-toolbar class="bg-primary">
       <template #start>
         <pv-button class="p-button-text" icon="pi pi-bars" @click="toggleDrawer"/>
-        <h3>ACME Learning Center</h3>
+        <h3>Automovil-Unite</h3>
       </template>
       <template #center>
         <div class="flex-column">
@@ -53,20 +56,18 @@ export default {
 
 <style scoped>
 
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
-  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom:
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
+  width: 100%;
 }
 
 </style>
