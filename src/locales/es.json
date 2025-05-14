@@ -1,3 +1,25 @@
 {
-
+  "option": {
+    "home": "Inicio",
+    "publications": "Publicaciones",
+    "titlegeneral": "Vehiculos disponibles",
+    "image": "Imagen",
+    "brand": "Marca",
+    "price": "Precio",
+    "model": "Modelo",
+    "year": "Año",
+    "description": "Descripcion",
+    "rating": "Calificacion",
+    "export": "Exportar",
+    "new": "Nuevo",
+    "delete": "Borrar",
+    "reserve": "Reservar",
+    "review": "Reseñar",
+    "navigation": "Navegacion"
+  },
+  "authoring-phrase": {
+    "intro": "Hecho con",
+    "use": "utilizando",
+    "author": "por el Equipo de Desarrollo de {brand}"
+  }
 }

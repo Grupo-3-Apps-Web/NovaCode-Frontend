@@ -8,7 +8,7 @@ export default {
 <template>
   <div class="w-full">
     <h1>Home</h1>
-    <p>Welcome to ACME Learning Center.</p>
+    <p>Welcome to Automovil-Unite.</p>
   </div>
 </template>
 

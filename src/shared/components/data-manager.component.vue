@@ -18,7 +18,7 @@ export default {
     return {
 
       selectedItems: [],
-      
+
       /**
        * @description Filter configuration for the data table
        */
@@ -33,14 +33,14 @@ export default {
     initFilters() {
       this.filters = {global: {value: null, matchMode: FilterMatchMode.CONTAINS}};
     },
-    
+
     /**
      * Handles the "New" button click and emits the new-item-requested event
      */
     newItem() {
       this.$emit('new-item-requested');
     },
-    
+
     /**
      * Shows a confirmation dialog for deleting selected items
      * If confirmed, emits the delete-selected-items-requested event with selected items
@@ -58,7 +58,7 @@ export default {
         reject:       () => {}
       });
     },
-    
+
     /**
      * Triggers CSV export of the current data table contents
      * Uses the PrimeVue DataTable exportCSV method
@@ -66,7 +66,7 @@ export default {
     exportToCsv() {
       this.$refs.dt.exportCSV()
     },
-    
+
     /**
      * Handles the edit button click for an item
      * @param {Object} item - The item to be edited
@@ -74,7 +74,7 @@ export default {
     editItem(item) {
       this.$emit('edit-item-requested', item);
     },
-    
+
     /**
      * Shows a confirmation dialog for deleting a single item
      * If confirmed, emits the delete-item-requested event with the item
@@ -94,7 +94,7 @@ export default {
       });
     },
   },
-  
+
   /**
    * Lifecycle hook called after the instance is created
    * Initializes the data table filters
@@ -112,12 +112,12 @@ export default {
   <!-- Toolbar Section -->
   <pv-toolbar class="mb-4">
     <template #start>
-      <pv-button class="mr-2" icon="pi pi-plus" label="New" severity="success" @click="newItem"/>
-      <pv-button :disabled="!selectedItems || !selectedItems.length" icon="pi pi-trash" label="Delete" severity="danger"
+      <pv-button class="mr-2" icon="pi pi-plus" :label="$t('option.new')" severity="success" @click="newItem"/>
+      <pv-button :disabled="!selectedItems || !selectedItems.length" icon="pi pi-trash" :label="$t('option.delete')" severity="danger"
                  @click="confirmDeleteSelected"/>
     </template>
     <template #end>
-      <pv-button icon="pi pi-download" label="Export" severity="help" @click="exportToCsv($event)"/>
+      <pv-button icon="pi pi-download" :label="$t('option.export')" severity="help" @click="exportToCsv($event)"/>
     </template>
   </pv-toolbar>
 
