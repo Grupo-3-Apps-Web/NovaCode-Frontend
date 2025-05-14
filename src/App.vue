@@ -53,20 +53,18 @@ export default {
 
 <style scoped>
 
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
 header {
-  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom:
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
+  width: 100%;
 }
 
 </style>

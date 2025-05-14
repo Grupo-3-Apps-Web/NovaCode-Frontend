@@ -1,70 +1,22 @@
 <script>
-/**
- * Import FilterMatchMode from PrimeVue core API for data table filtering
- */
+
 import {FilterMatchMode} from '@primevue/core/api';
 
-/**
- * @component data-manager
- * @description A reusable data management component that provides a standardized interface
- * for displaying, filtering, and performing CRUD operations on data collections.
- * Features include data display in tabular format, item selection, filtering, and
- * actions like create, edit, delete, and export.
- */
+
 export default {
   name: "data-manager",
   inheritAttrs: false,
   props: {
-    /**
-     *
-     * @description Array of data items to be displayed in the data table
-     * @required
-     */
     items: {type: Array, required: true},
-    
-    /**
-     *
-     * @property {String} singular - Singular form of the entity name (e.g., 'Category')
-     * @property {String} plural - Plural form of the entity name (e.g., 'Categories')
-     * @description Title configuration for the data manager
-     * @required
-     */
     title:  {type: { singular: '', plural: ''}, required: true},
-    
-    /**
-     *
-     * @description Whether to dynamically generate columns based on the columns prop
-     * @default false
-     */
     dynamic: {type: Boolean, default: false},
-    
-    /**
-     *
-     * @description Array of column definitions for dynamic columns
-     * @property {String} field - Field name to bind to column
-     * @property {String} header - Column header text
-     * @default []
-     */
     columns: {type: Array, default: []},
   },
-  
-  /**
-   * @event new-item-requested - Emitted when user clicks the "New" button
-   * @event edit-item-requested - Emitted when user clicks the edit button for an item, includes the item data
-   * @event delete-item-requested - Emitted when user confirms deletion of a single item, includes the item data
-   * @event delete-selected-items-requested - Emitted when user confirms deletion of selected items, includes an array of selected items
-   */
   emits: ['new-item-requested', 'edit-item-requested', 'delete-item-requested', 'delete-selected-items-requested'],
-  
-  /**
-   * @returns {Object} Component data
-   */
+
   data() {
     return {
-      /**
-       * @type {Array}
-       * @description Array of currently selected items in the data table
-       */
+
       selectedItems: [],
       
       /**

@@ -6,7 +6,7 @@ import httpInstance from "../../shared/services/http.instance.js";
  */
 export class PublicationsService {
     /** @type {string} The API endpoint for categories */
-    resourceEndpoint = import.meta.env.VITE_CATEGORIES_ENDPOINT_PATH;
+    resourceEndpoint = import.meta.env.VITE_PUBLICATION_ENDPOINT_PATH;
 
     /**
      * Retrieves all categories
