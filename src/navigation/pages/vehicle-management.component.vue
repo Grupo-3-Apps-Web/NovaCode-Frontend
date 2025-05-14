@@ -2,19 +2,17 @@
 
 import {Vehicle} from "../model/vehicle.entity.js";
 
-
 import {VehicleService} from "../services/vehicle.services.js";
-
 
 import DataManager from "../../shared/components/data-manager.component.vue";
 
-
 import VehicleItemCreateAndEditDialog from "../components/vehicle-item-create-and-edit.component.vue"
+import {Column as PvColumn} from "primevue";
 
 
 export default {
   name: "category-management",
-  components: {VehicleItemCreateAndEditDialog, DataManager},
+  components: {PvColumn, VehicleItemCreateAndEditDialog, DataManager},
 
   data() {
     return {
@@ -115,6 +113,12 @@ export default {
       this.notifySuccessfulAction("Categories Deleted");
     },
 
+    onReviewPublication(category) {
+      this.currentVehicle = category;
+      this.review = { rating: 0, comment: '' };
+      this.reviewDialogVisible = true;
+    },
+
 
     onSearch() {
       if (this.searchBrand.trim() === '') {
@@ -139,7 +143,7 @@ export default {
 
 
 <template>
-  <h1 >Available {{ title.plural }}</h1>
+  <h1 >{{ $t('option.titlegeneral') }}</h1>
   <div class="w-full">
 
     <div class="search-container" style="margin-bottom: 20px;">
@@ -163,24 +167,35 @@ export default {
 
       <template #custom-columns>
 
-        <pv-column :sortable="true" field="image" header="Vehiculo" style="min-width: 24rem; text-align: center;">
+        <pv-column :sortable="true" field="image" :header="$t('option.image')"  style="min-width: 24rem; text-align: center;">
           <template #body="slotProps">
             <div style="font-weight: bold; font-size: 1.2rem;">
-              Model: {{ slotProps.data.model }}
+              {{ $t('option.model') }}: {{ slotProps.data.model }}
             </div>
             <div style="display: flex; flex-direction: column; align-items: center;">
               <img :src="slotProps.data.image" alt="Vehicle Image" style="width: 300px; height: auto;"/>
               <div>
-                <div>Year: {{ slotProps.data.year }}</div>
-                <div>Description: {{ slotProps.data.description }}</div>
-                <div>Rating: {{ slotProps.data.rating }}</div>
+                <div>{{ $t('option.year') }}: {{ slotProps.data.year }}</div>
+                <div>{{ $t('option.description') }}: {{ slotProps.data.description }}</div>
+                <div>{{ $t('option.rating') }}: {{ slotProps.data.rating }}</div>
               </div>
+              <div class="card-actions">
+                <button class="reserve-button" @click="onReservePublication(publication)">
+                  <i class="pi pi-calendar"></i> {{ $t('option.reserve') }}
+                </button>
+                <button class="review-button" @click="onReviewPublication(category)">
+                  <i class="pi pi-star"></i> {{ $t('option.review') }}
+                </button>
+              </div>
+
+
             </div>
           </template>
         </pv-column>
 
-        <pv-column :sortable="true" field="brand" header="Brand" style="min-width: 24rem"/>
-        <pv-column :sortable="true" field="price" header="Price" style="min-width: 24rem"/>
+        <pv-column :sortable="true" field="brand" :header="$t('option.brand')" style="min-width: 24rem"/>
+        <pv-column :sortable="true" field="price" :header="$t('option.price')" style="min-width: 24rem"/>
+
       </template>
 
     </data-manager>
