@@ -15,7 +15,8 @@
     "delete": "Borrar",
     "reserve": "Reservar",
     "review": "Reseñar",
-    "navigation": "Navegacion"
+    "navigation": "Navegacion",
+    "dashboard": "Panel"
   },
   "authoring-phrase": {
     "intro": "Hecho con",

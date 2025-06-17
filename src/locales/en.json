@@ -15,7 +15,8 @@
     "delete": "Delete",
     "reserve": "Reserve",
     "review": "Review",
-    "navigation": "Navigation"
+    "navigation": "Navigation",
+    "dashboard": "Dashboard"
 
   },
   "authoring-phrase": {
