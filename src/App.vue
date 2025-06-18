@@ -12,6 +12,7 @@ export default {
         {label: 'option.home',       to: '/home'},
         {label: 'option.publications',       to: '/publications'},
         {label: 'option.navigation',       to: '/navigation'},
+        {label: 'option.dashboard',       to: '/dashboard'},
 
       ]
     }

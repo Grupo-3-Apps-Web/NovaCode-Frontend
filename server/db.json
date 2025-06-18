@@ -117,14 +117,14 @@
   ],
   "userProfile": [
     {
-      "profilePic": "",
-      "fullName": "",
-      "email": "",
-      "phone": "",
-      "address": "",
-      "birthday": "",
-      "dniPic": "",
-      "licensePic": ""
+      "id": 1,
+      "fullName": "Juan Pérez",
+      "email": "juan.perez@email.com",
+      "phone": "+51 987654321",
+      "address": "Calle Ficticia 123, Lima",
+      "birthday": "1985-06-15",
+      "dni": "12345678",
+      "imageProfile": "https://www.w3schools.com/w3images/avatar2.png"
     }
   ]
 }
