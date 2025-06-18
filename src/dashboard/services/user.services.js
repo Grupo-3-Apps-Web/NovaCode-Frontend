@@ -1,8 +1,8 @@
 import httpInstance from "../../shared/services/http.instance.js";
 
-export class VehicleService {
+export class UserService {
 
-    resourceEndpoint = import.meta.env.VITE_NAVIGATION_ENDPOINT_PATH;
+    resourceEndpoint = import.meta.env.VITE_PROFILE_ENDPOINT_PATH;
 
 
     getAll() {
