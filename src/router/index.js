@@ -1,7 +1,7 @@
 /**
  * @fileoverview Router configuration for the ACME Learning Center application
  * Defines all routes and navigation behavior for the application
- * holaholahola
+ * holaholaholahola
  */
 
 import {createRouter, createWebHistory} from "vue-router";
