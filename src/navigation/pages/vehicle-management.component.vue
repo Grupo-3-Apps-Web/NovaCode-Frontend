@@ -13,7 +13,12 @@ import {Column as PvColumn} from "primevue";
 export default {
   name: "category-management",
   components: {PvColumn, VehicleItemCreateAndEditDialog, DataManager},
-
+  props: {
+    vehicle: {
+      type: Vehicle,
+      required: true,
+    }
+  },
   data() {
     return {
       title: {singular: "Vehicle", plural: "Vehicles"},
@@ -183,9 +188,11 @@ export default {
                 <button class="reserve-button" @click="onReservePublication(publication)">
                   <i class="pi pi-calendar"></i> {{ $t('option.reserve') }}
                 </button>
-                <button class="review-button" @click="onReviewPublication(category)">
-                  <i class="pi pi-star"></i> {{ $t('option.review') }}
-                </button>
+                <router-link v-if="slotProps.data && slotProps.data.id" :to="`/navigation/${slotProps.data.id}/review`">
+                  <pv-button class="review-button">
+                    <i class="pi pi-star"></i> {{ $t('option.review') }}
+                  </pv-button>
+                </router-link>
               </div>
 
 

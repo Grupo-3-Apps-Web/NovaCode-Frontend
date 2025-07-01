@@ -15,6 +15,8 @@ const HomeComponent = () => import('../public/pages/home.component.vue');
 const PageNotFoundComponent = () => import('../public/pages/page-not-found.component.vue');
 const PublicationComponent = () => import('../publications/pages/publication-page.component.vue')
 const VehicleManagementComponent=()=> import('../navigation/pages/vehicle-management.component.vue')
+const UserManagementComponent=()=>import('../dashboard/pages/user-management.component.vue')
+const ReviewManagementComponent = () => import('../reviews/pages/review-management.component.vue');
 
 /**
  * @type {import('vue-router').RouteRecordRaw[]}
@@ -29,7 +31,9 @@ const routes = [
     {   path: '/home',                  name: 'home',       component: HomeComponent,               meta: {title: 'Home'}},
     {   path: '/',                      name: 'default',    redirect: {name: 'home'}},
     {   path: '/navigation', name:'navigation' , component: VehicleManagementComponent,    meta: {title: 'Navigation'}},
+    {   path: '/navigation/:id/review', name: 'review', component: ReviewManagementComponent, meta: {title: 'Review'}},
     {   path: '/publications',           name: 'publication', component: PublicationComponent,       meta: {title: 'Publications'}},
+    {   path: '/dashboard',           name: 'dashboard', component: UserManagementComponent,       meta: {title: 'Dashboard'}},
     {   path: '/:pathMatch(.*)*',       name: 'not-found',  component: PageNotFoundComponent,       meta: {title: 'Page not found'}},
 ]
 

@@ -126,5 +126,13 @@
       "dniPic": "",
       "licensePic": ""
     }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "score": "3",
+      "comment": "Bueno",
+      "vehicleId": "4"
+    }
   ]
 }
