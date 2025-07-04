@@ -15,7 +15,7 @@ const HomeComponent = () => import('../public/pages/home.component.vue');
 const PageNotFoundComponent = () => import('../public/pages/page-not-found.component.vue');
 const PublicationComponent = () => import('../publications/pages/publication-page.component.vue')
 const VehicleManagementComponent=()=> import('../navigation/pages/vehicle-management.component.vue')
-const UserManagementComponent=()=>import('../dashboard/pages/user-management.component.vue')
+const UserManagementComponent=()=>import('../profile/pages/user-management.component.vue')
 
 /**
  * @type {import('vue-router').RouteRecordRaw[]}
@@ -32,6 +32,7 @@ const routes = [
     {   path: '/navigation', name:'navigation' , component: VehicleManagementComponent,    meta: {title: 'Navigation'}},
     {   path: '/publications',           name: 'publication', component: PublicationComponent,       meta: {title: 'Publications'}},
     {   path: '/dashboard',           name: 'dashboard', component: UserManagementComponent,       meta: {title: 'Dashboard'}},
+    {   path: '/profile',           name: 'profile', component: UserManagementComponent,       meta: {title: 'Profile'}},
     {   path: '/:pathMatch(.*)*',       name: 'not-found',  component: PageNotFoundComponent,       meta: {title: 'Page not found'}},
 ]
 
