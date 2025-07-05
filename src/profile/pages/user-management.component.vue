@@ -7,12 +7,10 @@ import DataManager from "../../shared/components/data-manager.component.vue";
 
 import {Column as PvColumn} from "primevue";
 
-import BookVehicles from "../../dashboard/components/book-vehicles.component.vue";
-
 
 export default {
   name: "user-management",
-  components: {PvColumn, DataManager, BookVehicles},
+  components: {PvColumn, DataManager},
 
   data() {
     return {
