@@ -15,8 +15,7 @@ export default {
         {label: 'option.dashboard',       to: '/dashboard'},
         {label: 'option.profile',       to: '/profile'},
 
-      ]
-=======
+
       ],
       authenticationStore: useAuthenticationStore()
     }
