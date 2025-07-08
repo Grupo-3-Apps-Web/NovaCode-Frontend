@@ -2,7 +2,7 @@ import httpInstance from "../../shared/services/http.instance.js";
 
 export class BookService {
 
-    resourceEndpoint = import.meta.env.VITE_BOOKED_ENDPOINT_PATH;
+    resourceEndpoint = '/myBookedVehicles';
 
 
     getAll() {
