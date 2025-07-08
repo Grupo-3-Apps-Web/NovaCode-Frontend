@@ -1,7 +1,7 @@
 <script>
 import LanguageSwitcher from "./public/components/language-switcher.component.vue";
 import FooterContent from "./public/components/footer-content.component.vue";
-
+import {useAuthenticationStore} from "./iam/services/authentication.store.js";
 export default {
   name: 'App',
   components: {FooterContent, LanguageSwitcher},
@@ -9,18 +9,32 @@ export default {
     return {
       drawer: false,
       items: [
-        {label: 'option.home',       to: '/home'},
+        {label: 'option.dashboard',       to: '/dashboard'},
         {label: 'option.publications',       to: '/publications'},
         {label: 'option.navigation',       to: '/navigation'},
         {label: 'option.dashboard',       to: '/dashboard'},
         {label: 'option.profile',       to: '/profile'},
 
       ]
+=======
+      ],
+      authenticationStore: useAuthenticationStore()
+    }
+  },
+  computed: {
+    isSignedIn() {
+      return this.authenticationStore.isSignedIn;
+    },
+    currentUsername() {
+      return this.authenticationStore.currentUsername;
     }
   },
   methods: {
     toggleDrawer() {
       this.drawer = !this.drawer
+    },
+    onSignOut() {
+      this.authenticationStore.signOut(this.$router);
     }
   }
 }
@@ -65,7 +79,7 @@ export default {
 
 header {
   width: 100%;
-  margin-bottom:
+  margin-bottom: 1rem;
 }
 
 main {

@@ -79,8 +79,7 @@
       "year": "1999",
       "description": "Sedán confiable con amplio espacio interior.",
       "image": "https://santacecilia.com.pe/wp-content/uploads/2024/07/2880x2048-V2.jpg.ximg_.l_12_h.smart_-e1720313623284-798x466.jpg",
-      "price": 60,
-      "rating": 3
+      "price": 60
     },
     {
       "id": 6,
@@ -89,8 +88,7 @@
       "year": "2024",
       "description": "Vehículo de lujo con diseño futurista y excelente rendimiento.",
       "image": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_1d6e245013354690874907af24fbca7c.webp",
-      "price": 220,
-      "rating": 5
+      "price": 220
     }
   ],
   "myBookedVehicles": [
