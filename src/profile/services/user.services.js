@@ -2,7 +2,7 @@ import httpInstance from "../../shared/services/http.instance.js";
 
 export class UserService {
 
-    resourceEndpoint = import.meta.env.VITE_PROFILE_ENDPOINT_PATH;
+    resourceEndpoint = '/profiles';
 
 
     getAll() {
