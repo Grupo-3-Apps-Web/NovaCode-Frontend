@@ -1,17 +1,11 @@
 import {createRouter, createWebHistory} from "vue-router";
 import {authenticationGuard} from "../iam/services/authentication.guard.js";
 import VehicleManagementComponent from "../navigation/pages/vehicle-management.component.vue";
-import UserManagementComponent from "../dashboard/pages/user-management.component.vue";
+import UserManagementComponent from "../profile/pages/user-management.component.vue";
 import PageNotFoundComponent from "../public/pages/page-not-found.component.vue";
 import SignUpComponent from "../iam/pages/sign-up.component.vue";
 import SignInComponent from "../iam/pages/sign-in.component.vue";
 import PublicationPageComponent from "../publications/pages/publication-page.component.vue";
-
-
-
-
-const PageNotFoundComponent = () => import('../public/pages/page-not-found.component.vue');
-const UserManagementComponent=()=>import('../profile/pages/user-management.component.vue')
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

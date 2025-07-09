@@ -2,11 +2,11 @@ export class Vehicle{
     constructor( { id= '',
                      model= '',
                      brand= '',
-                     year= '',
+                     year= 0,
                      description= '',
                      image= '',
-                     price= '',
-                     rating= ''
+                     price= 0,
+                     rating= 0
                  }) {
 
         this.id = id;
