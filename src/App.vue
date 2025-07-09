@@ -13,6 +13,9 @@ export default {
         {label: 'option.publications',       to: '/publications'},
         {label: 'option.navigation',       to: '/navigation'},
         {label: 'option.dashboard',       to: '/dashboard'},
+        {label: 'option.profile',       to: '/profile'},
+
+
       ],
       authenticationStore: useAuthenticationStore()
     }
